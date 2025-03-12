@@ -9,8 +9,9 @@ namespace BetterDecorador
         /// Print the output of the string decorated.
         /// Takes numerous arguments. 
         /// Converts them to the desired type.
+        /// If inputs are less or more than 3 returns: === User did not specify args! ===
         /// </summary>
-        /// <param name="args"></param>
+        /// <param name="args">Inputs</param>
         private static void Main(string[] args)
         {
             if (args.Length==3)

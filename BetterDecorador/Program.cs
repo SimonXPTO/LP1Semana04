@@ -13,9 +13,16 @@ namespace BetterDecorador
         /// <param name="args"></param>
         private static void Main(string[] args)
         {
-            string str = args[0];
-            char Char = char.Parse(args[1]);
-            Console.WriteLine(Decor(str,Char,int.Parse(args[2])));
+            if (args.Length==3)
+            {
+                string str = args[0];
+                char Char = char.Parse(args[1]);
+                Console.WriteLine(Decor(str,Char,int.Parse(args[2])));
+            }
+            else
+            {
+                Console.WriteLine(Decor());
+            }
         }
 
         /// <summary>
@@ -30,14 +37,14 @@ namespace BetterDecorador
             string decor = new string(dec, count);
             return $"{decor} {s} {decor}";
         }
-        
+
         /// <summary>
         /// This method uses the method Decor using this arguments Decor("User did not specify args !", '=', 3)
         /// </summary>
         /// <returns>=== User did not specify args! ===</returns>
         private static string Decor()
         {
-            return Decor("User did not specify args !", '=', 3);
+            return Decor("User did not specify args!", '=', 3);
         }
     }
 }
